@@ -3,7 +3,7 @@ body {
     background-color: #000;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden; /* 只隐藏水平滚动条 */
 }
 .header {
     background-color: #2e8b57;
@@ -88,9 +88,8 @@ body {
     background-color: #2e8b57;
     color: #fff;
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    position: fixed; /* 修改为相对定位 */
+    bottom:0;
 }
 .language-switch {
     position: absolute;
@@ -109,7 +108,7 @@ body {
     background: #1c5d3a;
 }
 canvas {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 0;
