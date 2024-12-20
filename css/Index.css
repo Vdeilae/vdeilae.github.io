@@ -3,7 +3,7 @@ body {
     background-color: #000;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* 只隐藏水平滚动条 */
+    /* overflow-x: hidden; 只隐藏水平滚动条 */
 }
 .header {
     background-color: #2e8b57;
