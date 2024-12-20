@@ -3,58 +3,264 @@
 <head>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 <link rel="shortcut icon" href="./res/images/logo.ico" type="image/x-icon">
-
 <link rel="stylesheet" type="text/css" href="./css/common.css">
-<!-- <script type="text/javascript" src="/js/messageBox.js"></script> -->
-
-<title>VDLand</title>
+<title>VDLand-Index</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .header {
+        background-color: #2e8b57;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+    .header h1 {
+        margin: 0;
+    }
+    .content {
+        max-width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        position: relative;
+        z-index: 1;
+    }
+    .profile {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+    .profile img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+    }
+    .profile-info {
+        flex: 1;
+        min-width: 200px;
+    }
+    .profile-info h2 {
+        margin: 0;
+        color: #333;
+    }
+    .profile-info p {
+        margin: 5px 0;
+        color: #666;
+    }
+    .LinkWebsite a img {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+    .card {
+        margin-bottom: 30px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .card h3 {
+        margin-top: 0;
+        color: #333;
+    }
+    .card p {
+        line-height: 1.6;
+        margin: 10px 0;
+    }
+    .card a {
+        color: #2e8b57;
+        text-decoration: none;
+    }
+    .card a:hover {
+        text-decoration: underline;
+    }
+    .card img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    .footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #2e8b57;
+        color: #fff;
+        width: 100%;
+    }
+    .language-switch {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .language-switch button {
+        background: #2e8b57;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .language-switch button:hover {
+        background: #1c5d3a;
+    }
+    canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+</style>
 </head>
 
 <body>
-
+<div class="header">
+    <h1>欢迎访问VDLand!</h1>
+</div>
 
 <div class="content">
-    <h1>欢迎访问VDLand!</h1>
-    <h2>这是Vdeilae的个人网站。</h2>
-    <p>主页正在建设中...</p>
+    <div class="language-switch">
+        <button id="lang-cn">中文</button>
+        <button id="lang-en">English</button>
+    </div>
+    <div class="profile">
+        <img src="./res/images/avatar.jpg" alt="头像">
+        <div class="profile-info">
+            <h2>Vdeilae</h2>
+            <p id="signature">签名：热爱编程与设计</p>
+            <p id="introduction">介绍：欢迎来到我的个人博客，这里分享我的学习与生活。</p>
+            <p id="email">邮箱: vdeilae@qq.com</p>
+            <p class="LinkWebsite">
+                <a href="https://space.bilibili.com/292076843"><img src="https://space.bilibili.com/favicon.ico" alt="bilibili">bilibili</a>&nbsp;&nbsp;&nbsp;
+                <a href="https://blog.csdn.net/qq_37371407"><img src="https://blog.csdn.net/favicon.ico" alt="CSDN">CSDN</a>&nbsp;&nbsp;&nbsp;
+                <a href="https://github.com/Vdeilae"><img src="https://github.com/favicon.ico" alt="GitHub">GitHub</a>&nbsp;&nbsp;&nbsp;
+            </p>
+        </div>
+    </div>
 
-    <div>
-        <p>实用工具官网链接:<br/>
-            <a href="https://www.blender.org/">blender软件(点此跳转)</a>.<br/>
-            <a href="https://hibitsoft.ir/Uninstaller.html">HiBit Uninstaller卸载软件(点此跳转)</a>.<br/>
-            <!-- <a href="https://github.com/Vdeilae">GitHub主页</a>.<br/>  -->
+    <div >
+        <h3></h3>
+
+    </div>
+
+    <div class="card">
+        <h3 id="tools-title">实用工具官网链接</h3>
+        <p class="LinkWebsite">
+            <a href="https://www.blender.org/"><img src="https://www.blender.org/favicon.ico" alt="blender">blender</a>&nbsp;&nbsp;&nbsp;
+            <a href="https://hibitsoft.ir/Uninstaller.html"><img src="https://hibitsoft.ir/favicon.ico" alt="HiBit Uninstaller">HiBit Uninstaller</a>&nbsp;&nbsp;&nbsp;
         </p>
     </div>
 
-    <div>
-        <p>社交媒体链接:<br/>
-            <a href="https://space.bilibili.com/292076843">哔哩哔哩主页(点此跳转)</a>.<br/>
-            <a href="https://blog.csdn.net/qq_37371407">CSDN博客主页(点此跳转)</a>.<br/>
-            <a href="https://github.com/Vdeilae">GitHub主页(点此跳转)</a>.<br/> 
+    <div class="card">
+        <h3 id="maintenance-title">网站维护</h3>
+        <p id="maintenance-text">
+            网站维护不易，赞助点吧，一分两分都是爱！付款时记得备注用于VDLand网站维护。
+            <a href="./sponsor.html">赞助链接(点此跳转)</a>
         </p>
     </div>
 
-    <div>
-        <p>
-        <a>网站维护不易，赞助点吧，一分两分都是爱！付款时记得备注用于VDL网站维护。</a>
-        <a href="./sponsor.html">赞助链接(点此跳转)</a>
+    <div class="card">
+        <h3 id="christmas-title">圣诞树</h3>
+        <p id="christmas-text">
+            <a href="./christmas.html">圣诞树(点此跳转)</a>
         </p>
     </div>
-
-    <div>
-        <p>
-        <a href="./christmas.html">圣诞树(点此跳转)</a>
-        </p>
-    </div>
-
-
-
-    <div>
-        <a>联系方式:</a><br/>
-        <a>QQ:2294113085 &nbsp;微信:vdeilae&nbsp; 邮箱:vdeilae@qq.com </a><br/>
-    </div>
-
 </div>
+
+<div class="footer">
+    <p>&copy; 2023 Vdeilae. 保留所有权利。</p>
+</div>
+
+<canvas id="matrix"></canvas>
+
+<script>
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+
+    const drops = Array.from({ length: columns }).fill(1);
+
+    let mouseX = canvas.width / 2;
+    let mouseY = canvas.height / 2;
+
+    function draw() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = '#0f0';
+        ctx.font = `${fontSize}px arial`;
+
+        for (let i = 0; i < drops.length; i++) {
+            const text = letters[Math.floor(Math.random() * letters.length)];
+            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+
+            drops[i]++;
+        }
+
+        ctx.fillStyle = '#ff0';
+        ctx.fillText(letters[Math.floor(Math.random() * letters.length)], mouseX, mouseY);
+    }
+
+    setInterval(draw, 33);
+
+    canvas.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    document.getElementById('lang-cn').addEventListener('click', () => {
+        document.querySelector('.header h1').textContent = '欢迎访问VDLand!';
+        document.querySelector('.profile-info h2').textContent = 'Vdeilae';
+        document.getElementById('signature').textContent = '签名：热爱编程与设计';
+        document.getElementById('introduction').textContent = '介绍：欢迎来到我的个人博客，这里分享我的学习与生活。';
+        document.getElementById('email').textContent = '邮箱: vdeilae@qq.com';
+        document.getElementById('tools-title').textContent = '实用工具官网链接';
+        document.getElementById('maintenance-title').textContent = '网站维护';
+        document.getElementById('maintenance-text').innerHTML = '网站维护不易，赞助点吧，一分两分都是爱！付款时记得备注用于VDLand网站维护。<a href="./sponsor.html">赞助链接(点此跳转)</a>';
+        document.getElementById('christmas-title').textContent = '圣诞树';
+        document.getElementById('christmas-text').innerHTML = '<a href="./christmas.html">圣诞树(点此跳转)</a>';
+
+        document.querySelector('.footer').textContent = '&copy; 2023 Vdeilae. 保留所有权利。';
+    });
+
+    document.getElementById('lang-en').addEventListener('click', () => {
+        document.querySelector('.header h1').textContent = 'Welcome to VDLand!';
+        document.querySelector('.profile-info h2').textContent = 'Vdeilae';
+        document.getElementById('signature').textContent = 'Signature: Love programming and design';
+        document.getElementById('introduction').textContent = 'Introduction: Welcome to my personal blog, where I share my learning and life.';
+        document.getElementById('email').textContent = 'Email: vdeilae@qq.com';
+        document.getElementById('tools-title').textContent = 'Useful Tools Official Links';
+        document.getElementById('maintenance-title').textContent = 'Website Maintenance';
+        document.getElementById('maintenance-text').innerHTML = 'Website maintenance is not easy, please sponsor a bit, every penny counts! Remember to note that it is for VDLand website maintenance when paying. <a href="./sponsor.html">Sponsor Link (Click to jump)</a>';
+        document.getElementById('christmas-title').textContent = 'Christmas Tree';
+        document.getElementById('christmas-text').innerHTML = '<a href="./christmas.html">Christmas Tree (Click to jump)</a>';
+        document.querySelector('.footer').textContent = '&copy; 2023 Vdeilae. All rights reserved. ';
+    });
+</script>
 
 </body>
 </html>
