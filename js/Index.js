@@ -48,11 +48,12 @@ const canvas = document.getElementById('matrix');
     });
 
     document.getElementById('lang-cn').addEventListener('click', () => {
-        document.querySelector('.header h1').textContent = '欢迎访问VDLand!';
+        document.querySelector('.header h1').textContent = 'VFUN';
         document.querySelector('.profile-info h2').textContent = 'Vdeilae';
         document.getElementById('signature').textContent = '签名：热爱编程与设计';
         document.getElementById('introduction').textContent = '介绍：欢迎来到我的个人博客，这里分享我的学习与生活。';
         document.getElementById('email').textContent = '邮箱: vdeilae@qq.com';
+        document.getElementById('web-title').textContent = 'Another Website';
         document.getElementById('tools-title').textContent = '实用工具官网链接';
         document.getElementById('maintenance-title').textContent = '网站维护';
         document.getElementById('maintenance-text').innerHTML = '网站维护不易，赞助点吧，一分两分都是爱！付款时记得备注用于VDLand网站维护。<a href="./sponsor.html">赞助链接(点此跳转)</a>';
