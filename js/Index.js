@@ -48,7 +48,7 @@ const canvas = document.getElementById('matrix');
     });
 
     document.getElementById('lang-cn').addEventListener('click', () => {
-        document.querySelector('.header h1').textContent = 'VFUN';
+        document.querySelector('.header h1').textContent = 'VFUN官网';
         document.querySelector('.profile-info h2').textContent = 'Vdeilae';
         document.getElementById('signature').textContent = '签名：热爱编程与设计';
         document.getElementById('introduction').textContent = '介绍：欢迎来到我的个人博客，这里分享我的学习与生活。';
@@ -64,7 +64,7 @@ const canvas = document.getElementById('matrix');
     });
 
     document.getElementById('lang-en').addEventListener('click', () => {
-        document.querySelector('.header h1').textContent = 'Welcome to VDLand!';
+        document.querySelector('.header h1').textContent = 'VFUN Official Website';
         document.querySelector('.profile-info h2').textContent = 'Vdeilae';
         document.getElementById('signature').textContent = 'Signature: Love programming and design';
         document.getElementById('introduction').textContent = 'Introduction: Welcome to my personal blog, where I share my learning and life.';
