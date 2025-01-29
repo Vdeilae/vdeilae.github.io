@@ -47,6 +47,7 @@ const canvas = document.getElementById('matrix');
         mouseY = e.clientY;
     });
 
+    // 中文
     document.getElementById('lang-cn').addEventListener('click', () => {
         document.querySelector('.header h1').textContent = 'VFUN官网';
         document.querySelector('.profile-info h2').textContent = 'Vdeilae';
@@ -60,9 +61,11 @@ const canvas = document.getElementById('matrix');
         document.getElementById('christmas-text').innerHTML = '<a href="./christmas.html">圣诞树(点此跳转)</a>';
 
         document.querySelector('.footer').textContent = '&copy; 2023 Vdeilae. 保留所有权利。';
-        document.getElementById('web-title').textContent = 'Another Website';
+        document.getElementById('web-title').textContent = '另一个网站';
+        
     });
 
+    // 英文
     document.getElementById('lang-en').addEventListener('click', () => {
         document.querySelector('.header h1').textContent = 'VFUN Official Website';
         document.querySelector('.profile-info h2').textContent = 'Vdeilae';
@@ -75,5 +78,6 @@ const canvas = document.getElementById('matrix');
         document.getElementById('christmas-title').textContent = 'Christmas Tree';
         document.getElementById('christmas-text').innerHTML = '<a href="./christmas.html">Christmas Tree (Click to jump)</a>';
         document.querySelector('.footer').textContent = '&copy; 2023 Vdeilae. All rights reserved. ';
-        document.getElementById('web-title').textContent = '另一个网站';
+        document.getElementById('web-title').textContent = 'Another Website';
+        
     });
