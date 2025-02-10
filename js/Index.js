@@ -83,6 +83,19 @@ document.getElementById('lang-en').addEventListener('click', () => {
 });
 
 // 默认加载英文
-window.onload=function(){
-    document.getElementById('lang-en').click();
-}
+// window.onload=function(){
+//     document.getElementById('lang-en').click();
+// }
+window.onload = function () {
+    // 获取系统语言
+    const systemLanguage = navigator.language || navigator.userLanguage;
+
+    // 根据系统语言设置默认语言
+    if (systemLanguage.startsWith('zh')) {
+        // 中文
+        document.getElementById('lang-zh').click();
+    } else {
+        // 默认英文
+        document.getElementById('lang-en').click();
+    }
+};
