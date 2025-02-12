@@ -42,7 +42,7 @@ function draw() {
 
 setInterval(draw, 33);
 
-canvas.addEventListener('mousemove', (e) => {
+document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
 });
