@@ -83,6 +83,26 @@ document.getElementById('lang-en').addEventListener('click', () => {
 });
 
 // 默认加载英文
-window.onload=function(){
-    document.getElementById('lang-en').click();
-}
+window.onload = function () {
+    // 获取系统语言
+    const systemLanguage = navigator.language || navigator.userLanguage;
+
+    // 根据系统语言设置默认语言
+    if (systemLanguage.startsWith('zh')) {
+        // 中文
+        const langZhElement = document.getElementById('lang-zh');
+        if (langZhElement) {
+            langZhElement.click();
+        } else {
+            console.error('Element with ID "lang-zh" not found');
+        }
+    } else {
+        // 默认英文
+        const langEnElement = document.getElementById('lang-en');
+        if (langEnElement) {
+            langEnElement.click();
+        } else {
+            console.error('Element with ID "lang-en" not found');
+        }
+    }
+};
